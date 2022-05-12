@@ -35,7 +35,7 @@ external_library_flags = \
 -lUtilsPc32 \
 
 external_library_paths = \
--L$(external_lib_dir)/libUtils/lib \
+-L$(external_dir)/libUtils/lib \
 
 # Append rest of Makefile from template
 include $(make_dir)/SoftwareTestLib.mk
