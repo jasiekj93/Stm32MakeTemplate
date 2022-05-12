@@ -4,25 +4,20 @@
 # ------------------------------------------------
 
 # Target
-target := libBlinkLed-Application
+target = 
 
 # Directories
-project_dir ?= ..
+project_dir := ..
 make_dir := $(project_dir)/make
-external_dir := $(project_dir)/external
 
 # Sources 
-cxx_sources :=  \
-$(wildcard libBlinkLed/Application/*.cpp) \
+cxx_sources =  \
 
 # Includes
-cxx_includes := \
--I. \
--I$(project_dir)/libBlinkLed-Core \
--I$(external_dir)/libUtils \
+cxx_includes :=  \
 
 # Defines
 cxx_defs := \
 
 # Append rest of Makefile from template
-include $(make_dir)/SoftwareLib.mk
+include $(make_dir)/HardwareLib.mk

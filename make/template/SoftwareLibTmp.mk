@@ -4,7 +4,7 @@
 # ------------------------------------------------
 
 # Target
-target := libBlinkLed-Application
+target := 
 
 # Directories
 project_dir ?= ..
@@ -13,13 +13,9 @@ external_dir := $(project_dir)/external
 
 # Sources 
 cxx_sources :=  \
-$(wildcard libBlinkLed/Application/*.cpp) \
 
 # Includes
 cxx_includes := \
--I. \
--I$(project_dir)/libBlinkLed-Core \
--I$(external_dir)/libUtils \
 
 # Defines
 cxx_defs := \

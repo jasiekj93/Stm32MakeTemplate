@@ -1,28 +1,33 @@
 # ------------------------------------------------
 # @author Adrian Szczepanski
-# @date 06-03-2022
+# @date 06-03-2023
 # ------------------------------------------------
 
 # Target
-target := libBlinkLed-Application
+target := 
 
 # Directories
-project_dir ?= ..
+project_dir ?= ../..
 make_dir := $(project_dir)/make
 external_dir := $(project_dir)/external
 
 # Sources 
 cxx_sources :=  \
-$(wildcard libBlinkLed/Application/*.cpp) \
 
 # Includes
 cxx_includes := \
--I. \
--I$(project_dir)/libBlinkLed-Core \
--I$(external_dir)/libUtils \
 
 # Defines
 cxx_defs := \
 
+# Libraries
+library_includes = \
+
+library_flags = \
+
+external_library_flags = \
+
+external_library_paths = \
+
 # Append rest of Makefile from template
-include $(make_dir)/SoftwareLib.mk
+include $(make_dir)/SoftwareTestLib.mk
