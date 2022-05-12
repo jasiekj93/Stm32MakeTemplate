@@ -7,8 +7,8 @@
 TARGET = libUtils
 PLATFORM = ARM
 
-ifeq ($(PLATFORM), Win32)
-TARGET := $(TARGET)Win32
+ifeq ($(PLATFORM), Pc32)
+TARGET := $(TARGET)Pc32
 endif
 
 # debug
@@ -21,7 +21,7 @@ BUILD_DIR = build/$(TARGET)
 LIB_DIR = lib
 
 # toolchain
-ifeq ($(PLATFORM), Win32)
+ifeq ($(PLATFORM), Pc32)
 PREFIX = 
 else
 PREFIX = arm-none-eabi-
@@ -36,7 +36,7 @@ HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
 
 # mcu definition
-ifeq ($(PLATFORM), Win32)
+ifeq ($(PLATFORM), Pc32)
 MCU = -m32
 else
 CPU = -mcpu=cortex-m7
@@ -56,7 +56,7 @@ CXX_INCLUDES =  \
 # gcc flags
 CXXFLAGS = $(MCU) $(CXX_DEFS) $(CXX_INCLUDES) $(OPT) -std=c++17 -Wall  
 
-ifneq ($(PLATFORM), Win32)
+ifneq ($(PLATFORM), Pc32)
 CXXFLAGS += -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -fno-rtti
 endif
 
@@ -67,12 +67,15 @@ endif
 # Generate dependency information
 CXXFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 
-.PHONY: all library clean distclean
+.PHONY: all library pclibrary clean distclean
 
 # build all
-all: library 
+all: library pclibrary
 
 library: $(LIB_DIR)/$(TARGET).a
+
+pclibrary:
+	$(MAKE) -C . library PLATFORM=Pc32
 
 # list of C++ objects
 OBJECTS = $(addprefix $(BUILD_DIR)/,$(notdir $(CXX_SOURCES:.cpp=.o)))

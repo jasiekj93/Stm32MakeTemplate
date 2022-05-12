@@ -9,6 +9,7 @@ target := libBlinkLed-Application
 # Directories
 project_dir ?= ..
 make_dir := $(project_dir)/make
+external_lib_dir := $(project_dir)/external
 
 # Sources 
 cxx_sources :=  \
@@ -18,6 +19,7 @@ $(wildcard libBlinkLed/Application/*.cpp) \
 cxx_includes := \
 -I. \
 -I$(project_dir)/libBlinkLed-Core \
+-I$(external_lib_dir)/libUtils \
 
 # Defines
 cxx_defs := \

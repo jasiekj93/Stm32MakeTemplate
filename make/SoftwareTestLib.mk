@@ -16,6 +16,7 @@ include $(make_dir)/Configuration.mk
 # libraries
 LDFLAGS := \
 -L$(external_lib_dir)/CppUTest/lib/Pc32 \
+$(external_library_paths)
 
 # Includes
 cxx_includes += \
@@ -26,6 +27,7 @@ $(library_includes) \
 LDLIBS := \
 -lCppUTest \
 $(library_flags) \
+$(external_library_flags) \
 
 # Append GCC flags variables from file here
 include $(make_dir)/Flags.mk

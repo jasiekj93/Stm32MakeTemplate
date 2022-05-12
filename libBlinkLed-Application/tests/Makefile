@@ -4,11 +4,12 @@
 # ------------------------------------------------
 
 # Target
-terget := testBlinkLed-ApplicationPc32
+target := testBlinkLed-ApplicationPc32
 
 # Directories
 project_dir ?= ../..
 make_dir := $(project_dir)/make
+external_dir := $(project_dir)/external
 
 # Sources 
 cxx_sources :=  \
@@ -24,10 +25,17 @@ cxx_defs := \
 library_includes = \
 -I.. \
 -I$(project_dir)/libBlinkLed-Core \
+-I$(external_dir)/libUtils \
 
 library_flags = \
 -lBlinkLed-ApplicationPc32 \
 -lBlinkLed-CorePc32 \
+
+external_library_flags = \
+-lUtilsPc32 \
+
+external_library_paths = \
+-L$(external_lib_dir)/libUtils/lib \
 
 # Append rest of Makefile from template
 include $(make_dir)/SoftwareTestLib.mk

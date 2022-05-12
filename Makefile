@@ -13,6 +13,13 @@ make_dir := $(project_dir)/make
 # External libraries
 external_names = \
 CppUTest \
+libUtils \
+
+external_lib_names = \
+Utils \
+
+external_lib_dirs = \
+libUtils/lib \
 
 # Project libraries
 library_names = \

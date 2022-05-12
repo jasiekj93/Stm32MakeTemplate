@@ -5,11 +5,13 @@ using namespace Utils;
 Buffer::Buffer(size_t size)
 {
     _data = new int[size];
+    _size = size;
+    _count = 0;
 }
 
 Buffer::~Buffer()
 {
-    delete _data;
+    delete[] _data;
 }
 
 bool Buffer::Add(int object)
