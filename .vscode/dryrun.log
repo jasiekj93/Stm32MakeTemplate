@@ -1,0 +1,208 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate'
+echo Making libraries:
+make --directory=external/CppUTest
+make[1]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/external/CppUTest'
+echo Create directory build/libCppUTest
+mkdir -p build/libCppUTest		
+echo Compiling CppUTest/TestPlugin.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestPlugin.d" CppUTest/TestPlugin.cpp -o build/libCppUTest/TestPlugin.o
+echo Compiling CppUTest/TestOutput.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestOutput.d" CppUTest/TestOutput.cpp -o build/libCppUTest/TestOutput.o
+echo Compiling CppUTest/CommandLineArguments.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/CommandLineArguments.d" CppUTest/CommandLineArguments.cpp -o build/libCppUTest/CommandLineArguments.o
+echo Compiling CppUTest/TestTestingFixture.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestTestingFixture.d" CppUTest/TestTestingFixture.cpp -o build/libCppUTest/TestTestingFixture.o
+echo Compiling CppUTest/UtestPlatform.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/UtestPlatform.d" CppUTest/UtestPlatform.cpp -o build/libCppUTest/UtestPlatform.o
+echo Compiling CppUTest/MemoryLeakWarningPlugin.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/MemoryLeakWarningPlugin.d" CppUTest/MemoryLeakWarningPlugin.cpp -o build/libCppUTest/MemoryLeakWarningPlugin.o
+echo Compiling CppUTest/MemoryLeakDetector.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/MemoryLeakDetector.d" CppUTest/MemoryLeakDetector.cpp -o build/libCppUTest/MemoryLeakDetector.o
+echo Compiling CppUTest/TestRegistry.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestRegistry.d" CppUTest/TestRegistry.cpp -o build/libCppUTest/TestRegistry.o
+echo Compiling CppUTest/TestFilter.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestFilter.d" CppUTest/TestFilter.cpp -o build/libCppUTest/TestFilter.o
+echo Compiling CppUTest/Utest.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/Utest.d" CppUTest/Utest.cpp -o build/libCppUTest/Utest.o
+echo Compiling CppUTest/TeamCityTestOutput.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TeamCityTestOutput.d" CppUTest/TeamCityTestOutput.cpp -o build/libCppUTest/TeamCityTestOutput.o
+echo Compiling CppUTest/SimpleString.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/SimpleString.d" CppUTest/SimpleString.cpp -o build/libCppUTest/SimpleString.o
+echo Compiling CppUTest/CommandLineTestRunner.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/CommandLineTestRunner.d" CppUTest/CommandLineTestRunner.cpp -o build/libCppUTest/CommandLineTestRunner.o
+echo Compiling CppUTest/TestFailure.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestFailure.d" CppUTest/TestFailure.cpp -o build/libCppUTest/TestFailure.o
+echo Compiling CppUTest/TestMemoryAllocator.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestMemoryAllocator.d" CppUTest/TestMemoryAllocator.cpp -o build/libCppUTest/TestMemoryAllocator.o
+echo Compiling CppUTest/TestHarness_c.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestHarness_c.d" CppUTest/TestHarness_c.cpp -o build/libCppUTest/TestHarness_c.o
+echo Compiling CppUTest/TestResult.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/TestResult.d" CppUTest/TestResult.cpp -o build/libCppUTest/TestResult.o
+echo Compiling CppUTest/SimpleMutex.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/SimpleMutex.d" CppUTest/SimpleMutex.cpp -o build/libCppUTest/SimpleMutex.o
+echo Compiling CppUTest/JUnitTestOutput.cpp
+g++ -c -m32 -DCPPUTEST_USE_STD_CPP_LIB=1 -Iinclude  -Og -std=c++17 -Wall  -g -gdwarf-2 -MMD -MP -MF"build/libCppUTest/JUnitTestOutput.d" CppUTest/JUnitTestOutput.cpp -o build/libCppUTest/JUnitTestOutput.o
+echo Creating directory lib/Pc32
+mkdir -p lib/Pc32
+echo Creating library lib/Pc32/libCppUTest.a
+ar rcs lib/Pc32/libCppUTest.a build/libCppUTest/TestPlugin.o build/libCppUTest/TestOutput.o build/libCppUTest/CommandLineArguments.o build/libCppUTest/TestTestingFixture.o build/libCppUTest/UtestPlatform.o build/libCppUTest/MemoryLeakWarningPlugin.o build/libCppUTest/MemoryLeakDetector.o build/libCppUTest/TestRegistry.o build/libCppUTest/TestFilter.o build/libCppUTest/Utest.o build/libCppUTest/TeamCityTestOutput.o build/libCppUTest/SimpleString.o build/libCppUTest/CommandLineTestRunner.o build/libCppUTest/TestFailure.o build/libCppUTest/TestMemoryAllocator.o build/libCppUTest/TestHarness_c.o build/libCppUTest/TestResult.o build/libCppUTest/SimpleMutex.o build/libCppUTest/JUnitTestOutput.o 
+make[1]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/external/CppUTest'
+echo Making libraries:
+make --directory=libBlinkLed-Core
+make[1]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Core'
+echo Creating directory ../build/libBlinkLed-Core
+mkdir -p ../build/libBlinkLed-Core		
+echo Compiling libBlinkLed/Core/Math.cpp
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard   -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Core/Math.d" libBlinkLed/Core/Math.cpp -o ../build/libBlinkLed-Core/Math.o
+echo Creating directory ../lib
+mkdir ../lib
+echo Creating library ../lib/libBlinkLed-Core.a
+arm-none-eabi-ar rcs ../lib/libBlinkLed-Core.a ../build/libBlinkLed-Core/Math.o   
+make -C . library PLATFORM=Pc32 
+make[2]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Core'
+echo Creating directory ../build/libBlinkLed-CorePc32
+mkdir -p ../build/libBlinkLed-CorePc32		
+echo Compiling libBlinkLed/Core/Math.cpp
+g++ -c -m32   -O0 -std=c++17 -Wall   -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-CorePc32/Math.d" libBlinkLed/Core/Math.cpp -o ../build/libBlinkLed-CorePc32/Math.o
+echo Creating directory ../lib
+mkdir ../lib
+echo Creating library ../lib/libBlinkLed-CorePc32.a
+ar rcs ../lib/libBlinkLed-CorePc32.a ../build/libBlinkLed-CorePc32/Math.o   
+make[2]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Core'
+make -C tests PLATFORM=Pc32
+ 
+make[2]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Core/tests'
+echo Creating directory ../../build/testBlinkLed-CorePc32
+mkdir -p ../../build/testBlinkLed-CorePc32		
+echo Compiling Runner.test.cpp
+g++ -c -m32   -I..  -I../../external/CppUTest/include  -O0 -std=c++17 -Wall   -g -gdwarf-2 -MMD -MP -MF"../../build/testBlinkLed-CorePc32/Runner.test.d" Runner.test.cpp -o ../../build/testBlinkLed-CorePc32/Runner.test.o
+echo Compiling Math.test.cpp
+g++ -c -m32   -I..  -I../../external/CppUTest/include  -O0 -std=c++17 -Wall   -g -gdwarf-2 -MMD -MP -MF"../../build/testBlinkLed-CorePc32/Math.test.d" Math.test.cpp -o ../../build/testBlinkLed-CorePc32/Math.test.o
+echo Creating directory ../../test
+mkdir -p ../../test
+echo Linking ../../test/testBlinkLed-CorePc32.elf
+g++ ../../build/testBlinkLed-CorePc32/Runner.test.o ../../build/testBlinkLed-CorePc32/Math.test.o   -L../../external/CppUTest/lib/Pc32  -m32 -L../../lib -Wl,-Map=../../build/testBlinkLed-CorePc32/testBlinkLed-CorePc32.map,--cref -Wl,--gc-sections -lCppUTest -lBlinkLed-CorePc32   -o ../../test/testBlinkLed-CorePc32.elf
+size ../../test/testBlinkLed-CorePc32.elf
+../../test/testBlinkLed-CorePc32.elf
+make[2]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Core/tests'
+make[1]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Core'
+echo Making libraries:
+make --directory=libBlinkLed-Application
+make[1]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Application'
+echo Creating directory ../build/libBlinkLed-Application
+mkdir -p ../build/libBlinkLed-Application		
+echo Compiling libBlinkLed/Application/Program.cpp
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard  -I. -I../libBlinkLed-Core  -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Application/Program.d" libBlinkLed/Application/Program.cpp -o ../build/libBlinkLed-Application/Program.o
+echo Creating directory ../lib
+mkdir ../lib
+echo Creating library ../lib/libBlinkLed-Application.a
+arm-none-eabi-ar rcs ../lib/libBlinkLed-Application.a ../build/libBlinkLed-Application/Program.o   
+make -C . library PLATFORM=Pc32 
+make[2]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Application'
+echo Creating directory ../build/libBlinkLed-ApplicationPc32
+mkdir -p ../build/libBlinkLed-ApplicationPc32		
+echo Compiling libBlinkLed/Application/Program.cpp
+g++ -c -m32  -I. -I../libBlinkLed-Core  -O0 -std=c++17 -Wall   -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-ApplicationPc32/Program.d" libBlinkLed/Application/Program.cpp -o ../build/libBlinkLed-ApplicationPc32/Program.o
+echo Creating directory ../lib
+mkdir ../lib
+echo Creating library ../lib/libBlinkLed-ApplicationPc32.a
+ar rcs ../lib/libBlinkLed-ApplicationPc32.a ../build/libBlinkLed-ApplicationPc32/Program.o   
+make[2]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Application'
+make -C tests PLATFORM=Pc32
+make[2]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Application/tests'
+echo Creating directory ../../build/
+mkdir -p ../../build/		
+echo Compiling Runner.test.cpp
+g++ -c -m32   -I.. -I../../libBlinkLed-Core  -I../../external/CppUTest/include  -O0 -std=c++17 -Wall   -g -gdwarf-2 -MMD -MP -MF"../../build//Runner.test.d" Runner.test.cpp -o ../../build//Runner.test.o
+echo Compiling Program.test.cpp
+g++ -c -m32   -I.. -I../../libBlinkLed-Core  -I../../external/CppUTest/include  -O0 -std=c++17 -Wall   -g -gdwarf-2 -MMD -MP -MF"../../build//Program.test.d" Program.test.cpp -o ../../build//Program.test.o
+echo Creating directory ../../test
+mkdir -p ../../test
+echo Linking ../../test/.elf
+g++ ../../build//Runner.test.o ../../build//Program.test.o   -L../../external/CppUTest/lib/Pc32  -m32 -L../../lib -Wl,-Map=../../build//.map,--cref -Wl,--gc-sections -lCppUTest -lBlinkLed-ApplicationPc32 -lBlinkLed-CorePc32   -o ../../test/.elf
+size ../../test/.elf
+../../test/.elf
+make[2]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Application/tests'
+make[1]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Application'
+echo Making libraries:
+make --directory=libBlinkLed-Driver
+make[1]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Driver'
+echo Creating directory ../build/libBlinkLed-Driver
+mkdir -p ../build/libBlinkLed-Driver		
+echo Compiling libBlinkLed/Driver/System.cpp
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/System.d" libBlinkLed/Driver/System.cpp -o ../build/libBlinkLed-Driver/System.o
+echo Compiling libBlinkLed/Driver/Led.cpp
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/Led.d" libBlinkLed/Driver/Led.cpp -o ../build/libBlinkLed-Driver/Led.o
+echo Compiling Cube/Core/Src/stm32f7xx_hal_msp.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_msp.d" Cube/Core/Src/stm32f7xx_hal_msp.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_msp.o
+echo Compiling Cube/Core/Src/stm32f7xx_it.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_it.d" Cube/Core/Src/stm32f7xx_it.c -o ../build/libBlinkLed-Driver/stm32f7xx_it.o
+echo Compiling Cube/Core/Src/gpio.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/gpio.d" Cube/Core/Src/gpio.c -o ../build/libBlinkLed-Driver/gpio.o
+echo Compiling Cube/Core/Src/main.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/main.d" Cube/Core/Src/main.c -o ../build/libBlinkLed-Driver/main.o
+echo Compiling Cube/Core/Src/system_stm32f7xx.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/system_stm32f7xx.d" Cube/Core/Src/system_stm32f7xx.c -o ../build/libBlinkLed-Driver/system_stm32f7xx.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_tim.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_tim.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_gpio.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_gpio.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_exti.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_exti.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_cortex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_cortex.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_tim_ex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_tim_ex.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_dma.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_dma.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
+ 
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_pwr.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_pwr.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_i2c.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_i2c.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_dma_ex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_dma_ex.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_rcc.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_rcc.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_flash.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_flash.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_pwr_ex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_pwr_ex.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_i2c_ex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_i2c_ex.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_rcc_ex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_rcc_ex.o
+echo Compiling Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -DUSE_HAL_DRIVER -DSTM32F722xx -ICube/Core/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc -ICube/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -ICube/Drivers/CMSIS/Device/ST/STM32F7xx/Include -ICube/Drivers/CMSIS/Include -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"../build/libBlinkLed-Driver/stm32f7xx_hal_flash_ex.d" Cube/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c -o ../build/libBlinkLed-Driver/stm32f7xx_hal_flash_ex.o
+echo Compiling Cube/startup_stm32f722xx.s
+arm-none-eabi-gcc -x assembler-with-cpp -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard   -O0 -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions Cube/startup_stm32f722xx.s -o ../build/libBlinkLed-Driver/startup_stm32f722xx.o
+echo Creating directory ../lib
+mkdir ../lib
+echo Creating library ../lib/libBlinkLed-Driver.a
+arm-none-eabi-ar rcs ../lib/libBlinkLed-Driver.a ../build/libBlinkLed-Driver/System.o ../build/libBlinkLed-Driver/Led.o ../build/libBlinkLed-Driver/stm32f7xx_hal_msp.o ../build/libBlinkLed-Driver/stm32f7xx_it.o ../build/libBlinkLed-Driver/gpio.o ../build/libBlinkLed-Driver/main.o ../build/libBlinkLed-Driver/system_stm32f7xx.o ../build/libBlinkLed-Driver/stm32f7xx_hal_tim.o ../build/libBlinkLed-Driver/stm32f7xx_hal_gpio.o ../build/libBlinkLed-Driver/stm32f7xx_hal_exti.o ../build/libBlinkLed-Driver/stm32f7xx_hal_cortex.o ../build/libBlinkLed-Driver/stm32f7xx_hal_tim_ex.o ../build/libBlinkLed-Driver/stm32f7xx_hal_dma.o ../build/libBlinkLed-Driver/stm32f7xx_hal_pwr.o ../build/libBlinkLed-Driver/stm32f7xx_hal_i2c.o ../build/libBlinkLed-Driver/stm32f7xx_hal_dma_ex.o ../build/libBlinkLed-Driver/stm32f7xx_hal.o ../build/libBlinkLed-Driver/stm32f7xx_hal_rcc.o ../build/libBlinkLed-Driver/stm32f7xx_hal_flash.o ../build/libBlinkLed-Driver/stm32f7xx_hal_pwr_ex.o ../build/libBlinkLed-Driver/stm32f7xx_hal_i2c_ex.o ../build/libBlinkLed-Driver/stm32f7xx_hal_rcc_ex.o ../build/libBlinkLed-Driver/stm32f7xx_hal_flash_ex.o ../build/libBlinkLed-Driver/startup_stm32f722xx.o 
+make[1]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Driver'
+echo Making libraries:
+make --directory=libBlinkLed-Hal
+ 
+make[1]: Entering directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Hal'
+echo Creating directory ../lib
+mkdir ../lib
+echo Creating library ../lib/libBlinkLed-Hal.a
+arm-none-eabi-ar rcs ../lib/libBlinkLed-Hal.a    
+make[1]: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate/libBlinkLed-Hal'
+echo Creating directory build/BlinkLed
+mkdir -p build/BlinkLed		
+echo Compiling BlinkLed/Main.cpp
+arm-none-eabi-g++ -c -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard  -IBlinkLed  -IlibBlinkLed-Core -IlibBlinkLed-Application -IlibBlinkLed-Driver -IlibBlinkLed-Hal  -O0 -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"build/BlinkLed/Main.d" BlinkLed/Main.cpp -o build/BlinkLed/Main.o
+echo Creating directory bin
+mkdir bin
+echo Linking bin/BlinkLed.elf
+arm-none-eabi-g++ ./build/BlinkLed/Main.o   -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -L./lib -Wl,-Map=./build/BlinkLed/BlinkLed.map,--cref -Wl,--gc-sections -specs=nano.specs -specs=nosys.specs -TlibBlinkLed-Driver/Cube/STM32F722ZETx_FLASH.ld  -lc -lm -lnosys -lBlinkLed-Core -lBlinkLed-Application -lBlinkLed-Driver -lBlinkLed-Hal -lBlinkLed-Core -lBlinkLed-Application -lBlinkLed-Driver -lBlinkLed-Hal -o bin/BlinkLed.elf
+arm-none-eabi-size bin/BlinkLed.elf
+ 
+echo "Building time: [0 seconds]"
+make: Leaving directory '/home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate'
+ 

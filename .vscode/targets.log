@@ -1,0 +1,657 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu May 12 11:49:06 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# makefile (from 'make/Configuration.mk', line 23)
+PREFIX := arm-none-eabi-
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = cinnamon
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/aszczepanski/.Xauthority
+# environment
+GDMSESSION = cinnamon
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate
+# makefile
+SHELL = /bin/sh
+# makefile (from 'make/Configuration.mk', line 32)
+BIN := arm-none-eabi-objcopy -O binary -S
+# environment
+GDM_LANG = pl
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from 'make/Configuration.mk', line 29)
+SZ := arm-none-eabi-size
+# makefile (from 'make/Main.mk', line 20)
+project_dir := .
+# makefile (from 'make/BuildRules.mk', line 12)
+objects := ./build/BlinkLed/Main.o  
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-cinnamon:/etc/xdg
+# environment
+GTK_OVERLAY_SCROLLING = 1
+# makefile (from 'build/BlinkLed/Main.d', line 1)
+MAKEFILE_LIST :=  Makefile make/Main.mk make/Configuration.mk make/Flags.mk make/BuildRules.mk build/BlinkLed/Main.d
+# automatic
+@F = $(notdir $@)
+# makefile (from 'make/Configuration.mk', line 28)
+CP := arm-none-eabi-objcopy
+# makefile (from 'make/Flags.mk', line 10)
+DEBUG = 1
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'make/Flags.mk', line 27)
+CXXFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(OPT) -std=c++17 -Wall   -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -g -gdwarf-2 -MMD -MP -MF"$(@:%.o=%.d)"
+# environment
+MANDATORY_PATH = /usr/share/gconf/cinnamon.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/gnome:/usr/share/cinnamon:/home/aszczepanski/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'make/Main.mk', line 16)
+start_time := 1652348946
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'make/Flags.mk', line 11)
+GEN_LST = 0
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0155a8d6-a5e6-4cff-8a30-16077c344f5a.sock
+# makefile (from 'make/Configuration.mk', line 16)
+test_dir = $(project_dir)/test
+# environment
+VSCODE_CWD = /home/aszczepanski
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# makefile (from 'make/Main.mk', line 18)
+build_time = $(shell expr $(end_time) - $(start_time) )
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from 'make/Configuration.mk', line 13)
+build_dir = $(project_dir)/build/$(target)
+# makefile (from 'make/Main.mk', line 23)
+external_dirs := ./external/CppUTest
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/aszczepanski-PC:@/tmp/.ICE-unix/2508,unix/aszczepanski-PC:/tmp/.ICE-unix/2508
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'make/Main.mk', line 22)
+library_dirs := libBlinkLed-Core libBlinkLed-Application libBlinkLed-Driver libBlinkLed-Hal
+# makefile (from 'Makefile', line 25)
+cxx_sources = $(wildcard $(target)/*.cpp) 
+# makefile (from 'make/Configuration.mk', line 30)
+AR := arm-none-eabi-ar
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'make/Main.mk', line 43)
+LDFLAGS = $(MCU) -L$(lib_dir) -Wl,-Map=$(build_dir)/$(target).map,--cref -Wl,--gc-sections -specs=nano.specs -specs=nosys.specs -T$(ldscript)
+# makefile (from 'make/Main.mk', line 37)
+LDLIBS = -lc -lm -lnosys $(library_flags) $(library_flags)
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# makefile (from 'make/Configuration.mk', line 12)
+build_root_dir = $(project_dir)/build
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/aszczepanski
+# environment
+XDG_SESSION_DESKTOP = cinnamon
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# makefile (from 'make/Flags.mk', line 12)
+OPT = -O0
+# environment
+VSCODE_PIPE_LOGGING = true
+# makefile (from 'make/Configuration.mk', line 15)
+lib_dir = $(project_dir)/lib
+# environment
+PWD = /home/aszczepanski/Dokumenty/Projects/Stm32MakeTemplate
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 2581
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/aszczepanski
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/aszczepanski/.config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+LOGNAME = aszczepanski
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'make/Main.mk', line 29)
+binaries = $(addprefix $(bin_dir)/$(target)., $(binary_extensions))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# makefile (from 'Makefile', line 11)
+make_dir := ./make
+# default
+MAKECMDGOALS := all
+# makefile (from 'make/Configuration.mk', line 45)
+RMDIR = rm -rf
+# environment
+SHLVL = 0
+# makefile (from 'make/Configuration.mk', line 40)
+FLOAT-ABI := -mfloat-abi=hard
+# makefile (from 'make/Main.mk', line 26)
+library_flags := -lBlinkLed-Core -lBlinkLed-Application -lBlinkLed-Driver -lBlinkLed-Hal
+# makefile (from 'make/Configuration.mk', line 31)
+HEX := arm-none-eabi-objcopy -O ihex
+# makefile (from 'make/Configuration.mk', line 27)
+AS := arm-none-eabi-gcc -x assembler-with-cpp
+# makefile (from 'make/Flags.mk', line 35)
+ASFLAGS = $(MCU) $(asm_defs) $(asm_includes) $(OPT) -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = aszczepanski
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = X-Cinnamon
+# makefile (from 'make/Main.mk', line 28)
+binary_extensions := elf hex bin
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'make/Configuration.mk', line 38)
+CPU := -mcpu=cortex-m7
+# makefile (from 'make/Configuration.mk', line 39)
+FPU := -mfpu=fpv5-sp-d16
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = pl
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-1dc71767-1.67.0-main.sock
+# makefile (from 'make/Main.mk', line 17)
+end_time = $(shell date +%s)
+# makefile (from 'make/Configuration.mk', line 14)
+bin_dir = $(project_dir)/bin
+# makefile
+MAKEFLAGS = pqrR
+# makefile (from 'Makefile', line 33)
+ldscript = libBlinkLed-Driver/Cube/STM32F722ZETx_FLASH.ld 
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# automatic
++F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
+# environment
+CINNAMON_VERSION = 4.8.6
+# makefile (from 'Makefile', line 7)
+target = BlinkLed
+# makefile (from 'make/Configuration.mk', line 17)
+external_lib_dir = $(project_dir)/external
+# environment
+QT_ACCESSIBILITY = 1
+# makefile (from 'make/Configuration.mk', line 41)
+MCU := -mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard
+# environment
+DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
+# makefile (from 'make/Configuration.mk', line 8)
+PLATFORM = ARM
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'make/Configuration.mk', line 26)
+CXX := arm-none-eabi-g++
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# makefile (from 'Makefile', line 14)
+external_names = CppUTest 
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# makefile (from 'Makefile', line 18)
+library_names = Core Application Driver Hal 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# makefile (from 'make/Main.mk', line 32)
+cxx_includes = -I$(target)  $(library_includes) 
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+VSCODE_PID = 3214
+# makefile (from 'make/Main.mk', line 25)
+ 
+library_includes := -IlibBlinkLed-Core -IlibBlinkLed-Application -IlibBlinkLed-Driver -IlibBlinkLed-Hal
+# variable set hash-table stats:
+# Load=144/1024=14%, Rehash=0, Collisions=38/345=11%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 57, inode 23199928): 19 files, no impossibilities.
+# BlinkLed (device 57, inode 24511427): 3 files, no impossibilities.
+# bin (device 57, inode 24511777): No files, no impossibilities so far.
+# ./build/BlinkLed (device 57, inode 24511774): 5 files, no impossibilities.
+
+# 27 files, no impossibilities in 4 directories.
+
+# Implicit Rules
+
+print-%:
+#  recipe to execute (from 'make/Main.mk', line 59):
+	 @echo "$* = $($*)"
+
+build/BlinkLed/%.o: %.cpp Makefile | build/BlinkLed
+#  recipe to execute (from 'make/BuildRules.mk', line 21):
+	@echo Compiling $<
+	@$(CXX) -c $(CXXFLAGS) $< -o $@
+
+build/BlinkLed/%.o: %.c Makefile | build/BlinkLed
+#  recipe to execute (from 'make/BuildRules.mk', line 26):
+	@echo Compiling $<
+	@$(CXX) -c $(CXXFLAGS) $< -o $@
+
+build/BlinkLed/%.o: %.s Makefile | build/BlinkLed
+#  recipe to execute (from 'make/BuildRules.mk', line 31):
+	@echo Compiling $<
+	@$(AS) -c $(ASFLAGS) $< -o $@
+
+bin/%.hex: bin/%.elf | bin
+#  recipe to execute (from 'make/BuildRules.mk', line 53):
+	@$(HEX) $< $@
+	
+
+bin/%.bin: bin/%.elf | bin
+#  recipe to execute (from 'make/BuildRules.mk', line 57):
+	@$(BIN) $< $@		
+
+# 6 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+external/CppUTest:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := external/CppUTest
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/14=14%
+#  recipe to execute (from 'make/Main.mk', line 56):
+	@echo Making libraries:
+	+@$(MAKE) --directory=$@
+
+libBlinkLed-Application/libBlinkLed/Application/Hardware/ILed.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: external/CppUTest libBlinkLed-Core libBlinkLed-Application libBlinkLed-Driver libBlinkLed-Hal bin/BlinkLed.elf bin/BlinkLed.hex bin/BlinkLed.bin
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'make/Main.mk', line 49):
+	@echo "Building time: [$(build_time) seconds]"
+
+bin:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 69):
+	@echo Creating directory $@
+	@mkdir $@
+
+.PHONY: all external/CppUTest libBlinkLed-Core libBlinkLed-Application libBlinkLed-Driver libBlinkLed-Hal bin/BlinkLed.elf bin/BlinkLed.hex bin/BlinkLed.bin clean distclean rebuild
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/BlinkLed/Main.o: BlinkLed/Main.cpp libBlinkLed-Hal/libBlinkLed/Hal/System.hpp libBlinkLed-Application/libBlinkLed/Application/Hardware/ISystem.hpp libBlinkLed-Driver/libBlinkLed/Driver/System.hpp libBlinkLed-Hal/libBlinkLed/Hal/Led.hpp libBlinkLed-Application/libBlinkLed/Application/Hardware/ILed.hpp libBlinkLed-Driver/libBlinkLed/Driver/Led.hpp libBlinkLed-Application/libBlinkLed/Application/Program.hpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libBlinkLed-Core: external/CppUTest
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 56):
+	@echo Making libraries:
+	+@$(MAKE) --directory=$@
+
+distclean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 75):
+	@echo Restoring project folder to default state
+	@$(RMDIR) $(build_root_dir)
+	@$(RMDIR) $(bin_dir)
+	@$(RMDIR) $(lib_dir)
+	@$(RMDIR) $(test_dir)
+	+@for dir in $(external_dirs); do \
+		$(MAKE) --directory=$$dir distclean; \
+	done
+
+# Not a target:
+make/BuildRules.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-25 11:12:42
+#  File has been updated.
+#  Successfully updated.
+
+libBlinkLed-Hal: external/CppUTest
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 56):
+	@echo Making libraries:
+	+@$(MAKE) --directory=$@
+
+bin/BlinkLed.hex: external/CppUTest libBlinkLed-Core libBlinkLed-Application libBlinkLed-Driver libBlinkLed-Hal
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+BlinkLed/Main.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-25 11:12:42
+#  File has been updated.
+#  Successfully updated.
+
+rebuild:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 66):
+	@$(RMDIR) $(bin_dir)
+	+@$(MAKE) -C .
+
+# Not a target:
+make/Main.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-25 11:12:42
+#  File has been updated.
+#  Successfully updated.
+
+test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 73):
+	@echo Creating directory $@
+	@mkdir -p $@
+
+bin/BlinkLed.elf: build/BlinkLed/Main.o Makefile external/CppUTest libBlinkLed-Core libBlinkLed-Application libBlinkLed-Driver libBlinkLed-Hal | bin
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 47):
+	@echo Linking $@
+	@$(CXX) $(objects) $(LDFLAGS) $(LDLIBS) -o $@
+	@$(SZ) $@
+
+# Not a target:
+make/Configuration.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-25 11:12:42
+#  File has been updated.
+#  Successfully updated.
+
+libBlinkLed-Driver: external/CppUTest
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 56):
+	@echo Making libraries:
+	+@$(MAKE) --directory=$@
+
+build/BlinkLed:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 61):
+	@echo Creating directory $@
+	@mkdir -p $@		
+
+lib:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 65):
+	@echo Creating directory $@
+	@mkdir $@
+
+libBlinkLed-Driver/libBlinkLed/Driver/Led.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libBlinkLed-Hal/libBlinkLed/Hal/Led.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libBlinkLed-Application/libBlinkLed/Application/Hardware/ISystem.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+test/BlinkLed.elf: build/BlinkLed/Main.o Makefile | test
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 41):
+	@echo Linking $@
+	@$(CXX) $(objects) $(LDFLAGS) $(LDLIBS) -o $@
+	@$(SZ) $@
+
+libBlinkLed-Application: external/CppUTest
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 56):
+	@echo Making libraries:
+	+@$(MAKE) --directory=$@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'make/Main.mk', line 71):
+	@echo Cleaning
+	@$(RMDIR) $(build_root_dir)
+
+bin/BlinkLed.bin: external/CppUTest libBlinkLed-Core libBlinkLed-Application libBlinkLed-Driver libBlinkLed-Hal
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+lib/BlinkLed.a: build/BlinkLed/Main.o Makefile | lib
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'make/BuildRules.mk', line 36):
+	@echo Creating library $@
+	@$(AR) rcs $@ $(objects) 
+
+# Not a target:
+make/Flags.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-25 11:12:42
+#  File has been updated.
+#  Successfully updated.
+
+ 
+libBlinkLed-Application/libBlinkLed/Application/Program.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libBlinkLed-Driver/libBlinkLed/Driver/System.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+libBlinkLed-Hal/libBlinkLed/Hal/System.hpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/BlinkLed/Main.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-12 11:47:46.727482497
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=36/1024=4%, Rehash=0, Collisions=4/123=3%
+# VPATH Search Paths
+
+vpath %.cpp BlinkLed
+
+# 1 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 62 / storage = 1004 B / avg = 16 B
+# current buf: size = 8162 B / used = 1004 B / count = 62 / avg = 16 B
+
+# strcache performance: lookups = 178 / hit rate = 65%
+# hash-table stats:
+# Load=62/8192=1%, Rehash=0, Collisions=3/178=2%
+# Finished Make data base on Thu May 12 11:49:06 2022
+
+ 
