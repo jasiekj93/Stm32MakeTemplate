@@ -24,13 +24,16 @@ LDLIBS := \
 $(library_flags) \
 $(external_library_flags) \
 
+binary_extensions := elf hex bin
+binaries := $(addprefix $(test_dir)/$(target)., $(binary_extensions))
+
 # Append GCC flags variables from file here
 include $(make_dir)/Flags.mk
 
 # Targets
 .PHONY: all clean
 
-all: $(test_dir)/$(target).elf
+all: $(binaries) 
 
 print-%  : ; @echo "$* = $($*)"
 

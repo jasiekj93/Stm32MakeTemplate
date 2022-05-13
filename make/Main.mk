@@ -30,7 +30,7 @@ external_library_flags := $(addprefix -l, $(external_lib_names))
 external_search_path := $(addprefix -L$(external_lib_dir)/, $(external_lib_dirs))
 
 binary_extensions := elf hex bin
-binaries = $(addprefix $(bin_dir)/$(target)., $(binary_extensions))
+binaries := $(addprefix $(bin_dir)/$(target)., $(binary_extensions))
 
 # Includes
 cxx_includes += \

@@ -36,11 +36,19 @@ $(lib_dir)/$(target).a: $(objects) Makefile | $(lib_dir)
 	@echo Creating library $@
 	@$(AR) rcs $@ $(objects) 
 
-# build test executable
+# build test executable: elf
 $(test_dir)/$(target).elf: $(objects) Makefile | $(test_dir)
 	@echo Linking $@
 	@$(CXX) $(objects) $(LDFLAGS) $(LDLIBS) -o $@
 	@$(SZ) $@
+
+# build test executable (hardware): hex
+$(test_dir)/%.hex: $(test_dir)/%.elf | $(test_dir)
+	@$(HEX) $< $@
+	
+# build test executable (hardware): bin
+$(test_dir)/%.bin: $(test_dir)/%.elf | $(test_dir)
+	@$(BIN) $< $@		
 
 # build main executable: elf
 $(bin_dir)/$(target).elf: $(objects) Makefile | $(bin_dir)
