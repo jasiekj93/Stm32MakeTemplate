@@ -38,7 +38,7 @@ $(library_includes) \
 $(external_library_includes) \
 
 # Libraries
-LDLIBS = -lc -lm -lnosys 
+LDLIBS := -lc -lm -lnosys 
 LDLIBS += $(library_flags) $(external_library_flags) 
 LDLIBS += $(library_flags) $(external_library_flags) 
 

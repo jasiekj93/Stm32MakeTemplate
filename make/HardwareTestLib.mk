@@ -20,7 +20,7 @@ cxx_includes += \
 $(library_includes) \
 
 # libraries
-LDLIBS := \
+LDLIBS := -lc -lm -lnosys \
 $(library_flags) \
 $(external_library_flags) \
 
