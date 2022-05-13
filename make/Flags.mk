@@ -12,10 +12,10 @@ GEN_LST ?= 0
 OPT ?= -O0
 
 ### GCC flags ###
-CXXFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(OPT) -std=c++17 -Wall  
+CXXFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(OPT) -std=c++17 
 
 ifneq ($(PLATFORM), Pc32)
-CXXFLAGS += -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions
+CXXFLAGS += -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -fno-rtti 
 endif
 
 # Add debug flags
@@ -32,7 +32,7 @@ CXXFLAGS += -Wa,-a,-ad,-alms=$(build_dir)/$(notdir $(<:.cpp=.lst))
 endif
 
 #Assembler flags
-ASFLAGS += $(MCU) $(asm_defs) $(asm_includes) $(OPT) -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions
+ASFLAGS += $(MCU) $(asm_defs) $(asm_includes) $(OPT) -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions 
 
 #Linker flags and directories
 #Libraries are stored in variable LDLIBS
