@@ -4,7 +4,7 @@
 # ------------------------------------------------
 
 # Target
-target = libBlinkLed-Hal
+target := 
 
 # Directories
 project_dir := ..
@@ -12,12 +12,9 @@ make_dir := $(project_dir)/make
 
 # Sources 
 cxx_sources =  \
-$(wildcard libBlinkLed/Hal/*.cpp) \
 
 # Includes
 cxx_includes :=  \
--I. \
--I../libBlinkLed-Application \
 
 # Defines
 cxx_defs := \

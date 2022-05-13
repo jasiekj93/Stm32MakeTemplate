@@ -4,7 +4,7 @@
 # ------------------------------------------------
 
 # Target
-target = 
+target := 
 
 # Directories
 project_dir := ..

@@ -14,14 +14,9 @@ include $(make_dir)/Configuration.mk
 include $(make_dir)/Flags.mk
 
 # Targets
-.PHONY: all library tests clean
+.PHONY: all library clean
 
-all: library tests
-
-library: $(lib_dir)/$(target).a
-
-tests:
-	+@$(MAKE) -C tests 
+all: $(lib_dir)/$(target).a
 
 print-%  : ; @echo $* = $($*)
 

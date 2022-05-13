@@ -1,26 +1,33 @@
 # ------------------------------------------------
 # @author Adrian Szczepanski
-# @date 06-03-2022
+# @date 06-03-2023
 # ------------------------------------------------
 
 # Target
-target = libBlinkLed-Hal
+target := 
 
 # Directories
-project_dir := ..
+project_dir ?= ../..
 make_dir := $(project_dir)/make
+external_dir := $(project_dir)/external
 
 # Sources 
-cxx_sources =  \
-$(wildcard libBlinkLed/Hal/*.cpp) \
+cxx_sources :=  \
 
 # Includes
-cxx_includes :=  \
--I. \
--I../libBlinkLed-Application \
+cxx_includes := \
 
 # Defines
 cxx_defs := \
 
+# Libraries
+library_includes = \
+
+library_flags = \
+
+external_library_flags = \
+
+external_library_paths = \
+
 # Append rest of Makefile from template
-include $(make_dir)/HardwareLibNoTests.mk
+include $(make_dir)/HardwareTestLib.mk
