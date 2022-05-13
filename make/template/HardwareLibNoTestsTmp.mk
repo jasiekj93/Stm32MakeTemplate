@@ -13,6 +13,10 @@ make_dir := $(project_dir)/make
 # Sources 
 cxx_sources =  \
 
+c_sources := \
+
+asm_sources := \
+
 # Includes
 cxx_includes :=  \
 
