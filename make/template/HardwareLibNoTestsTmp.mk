@@ -9,6 +9,7 @@ target :=
 # Directories
 project_dir := ..
 make_dir := $(project_dir)/make
+external_dir := $(project_dir)/external
 
 # Sources 
 cxx_sources =  \
