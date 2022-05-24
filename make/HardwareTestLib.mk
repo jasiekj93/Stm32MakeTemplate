@@ -7,6 +7,7 @@
 # in other Makefile
 
 project_dir := ../..
+PLATFORM := ARM
 
 # Append Configuration variables from file here
 include $(make_dir)/Configuration.mk
@@ -29,6 +30,9 @@ binaries := $(addprefix $(test_dir)/$(target)., $(binary_extensions))
 
 # Append GCC flags variables from file here
 include $(make_dir)/Flags.mk
+
+# Linker script to linker flags
+LDFLAGS += -T$(ldscript)
 
 # Targets
 .PHONY: all clean
