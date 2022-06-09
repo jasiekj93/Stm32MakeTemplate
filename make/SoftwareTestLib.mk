@@ -6,7 +6,7 @@
 # This file is only a template and should be included 
 # in other Makefile
 
-project_dir := ../..
+project_dir ?= ../..
 PLATFORM := Pc32
 
 # Append Configuration variables from file here
