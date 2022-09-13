@@ -12,24 +12,28 @@ GEN_LST ?= 0
 OPT ?= -O0
 
 ### GCC flags ###
-CXXFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(OPT) -std=c++17 
+CFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(OPT)
 
 ifneq ($(PLATFORM), Pc32)
-CXXFLAGS += -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions -fno-rtti 
+CFLAGS += -fdata-sections -ffunction-sections 
+CXXFLAGS += -ffreestanding -fno-exceptions -fno-rtti 
 endif
 
 # Add debug flags
 ifeq ($(DEBUG), 1)
-CXXFLAGS += -g -gdwarf-2
+CFLAGS += -g -gdwarf-2
 endif
 
 # Generate dependency information as 'make' rules
-CXXFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
+CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" 
 
 # Generate assembly output into build directory
 ifeq ($(GEN_LST), 1)
-CXXFLAGS += -Wa,-a,-ad,-alms=$(build_dir)/$(notdir $(<:.cpp=.lst))
+CFLAGS += -Wa,-a,-ad,-alms=$(build_dir)/$(notdir $(<:.cpp=.lst))
 endif
+
+#G++ specyfic flags
+CXXFLAGS += $(CFLAGS) -std=c++17 
 
 #Assembler flags
 ASFLAGS += $(MCU) $(asm_defs) $(asm_includes) $(OPT) -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions 

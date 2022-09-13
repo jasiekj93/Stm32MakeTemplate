@@ -24,6 +24,7 @@ PREFIX := arm-none-eabi-
 endif
 
 CXX := $(PREFIX)g++
+CC := $(PREFIX)gcc
 AS := $(PREFIX)gcc -x assembler-with-cpp
 CP := $(PREFIX)objcopy
 SZ := $(PREFIX)size

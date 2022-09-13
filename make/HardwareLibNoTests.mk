@@ -10,6 +10,10 @@ project_dir := ..
 
 # Append Configuration variables from file here
 include $(make_dir)/Configuration.mk
+
+# Libraries
+LDLIBS := -lc -lm -lnosys \
+
 # Append GCC flags variables from file here
 include $(make_dir)/Flags.mk
 

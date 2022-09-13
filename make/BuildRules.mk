@@ -24,7 +24,11 @@ $(build_dir)/%.o: %.cpp Makefile | $(build_dir)
 # build C objects
 $(build_dir)/%.o: %.c Makefile | $(build_dir)
 	@echo Compiling $<
+ifeq ($(use_gcc_for_c_files), 1)
+	@$(CC) -c $(CFLAGS) $< -o $@
+else
 	@$(CXX) -c $(CXXFLAGS) $< -o $@
+endif
 
 # build ASM objects
 $(build_dir)/%.o: %.s Makefile | $(build_dir)
