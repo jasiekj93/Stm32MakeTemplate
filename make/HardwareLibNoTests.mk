@@ -6,7 +6,7 @@
 # This file is only a template and should be included 
 # in other Makefile
 
-project_dir := ..
+project_dir ?= ..
 
 # Append Configuration variables from file here
 include $(make_dir)/Configuration.mk
