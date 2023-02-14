@@ -52,10 +52,13 @@ include $(make_dir)/Flags.mk
 LDFLAGS += -T$(ldscript)
 
 # targets
-.PHONY: all $(external_dirs) $(library_dirs) $(binaries) clean distclean rebuild
+.PHONY: debug release $(external_dirs) $(library_dirs) $(binaries) clean distclean rebuild
 
-all: $(external_dirs) $(library_dirs) $(binaries)
+debug: $(external_dirs) $(library_dirs) $(binaries)
 	@echo "Building time: [$(build_time) seconds]"
+
+release:
+	+@$(MAKE) --directory=$(project_dir) build_type=release
 
 $(binaries): $(external_dirs) $(library_dirs)
 
@@ -83,9 +86,9 @@ clean:
 distclean:
 	@echo Restoring project folder to default state
 	@$(RMDIR) $(build_root_dir)
-	@$(RMDIR) $(bin_dir)
-	@$(RMDIR) $(lib_dir)
-	@$(RMDIR) $(test_dir)
+	@$(RMDIR) $(bin_root_dir)
+	@$(RMDIR) $(lib_root_dir)
+	@$(RMDIR) $(test_root_dir)
 	+@for dir in $(external_dirs); do \
 		$(MAKE) --directory=$$dir distclean; \
 	done

@@ -37,7 +37,7 @@ cxx_includes =  \
 -I$(target) \
 
 # Linker script
-ldscript = libBlinkLed-Driver/Cube/STM32F722ZETx_FLASH.ld 
+export ldscript = libBlinkLed-Driver/Cube/STM32F722ZETx_FLASH.ld 
 
 # Append rest of Makefile from template
 include $(make_dir)/Main.mk

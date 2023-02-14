@@ -29,8 +29,5 @@ external_library_flags = \
 
 external_library_paths = \
 
-# Linker script
-ldscript = 
-
 # Append rest of Makefile from template
 include $(make_dir)/HardwareTestLib.mk

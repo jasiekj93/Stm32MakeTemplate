@@ -6,14 +6,18 @@
 # This file is only a template and should be included 
 # in other Makefile
 PLATFORM ?= ARM
+build_type ?= debug
 
 # directories
 project_dir ?= ..
 build_root_dir = $(project_dir)/build
-build_dir = $(project_dir)/build/$(target)
-bin_dir = $(project_dir)/bin
-lib_dir = $(project_dir)/lib
-test_dir = $(project_dir)/test
+bin_root_dir = $(project_dir)/bin
+lib_root_dir = $(project_dir)/lib
+test_root_dir = $(project_dir)/test
+build_dir = $(project_dir)/build/$(build_type)/$(target)
+bin_dir = $(project_dir)/bin/$(build_type)
+lib_dir = $(project_dir)/lib/$(build_type)
+test_dir = $(project_dir)/test/$(build_type)
 external_lib_dir = $(project_dir)/external
 
 # Toolchain
@@ -44,3 +48,4 @@ endif
 
 # Utilities
 RMDIR ?= rm -rf
+MKDIR ?= mkdir -p

@@ -32,7 +32,7 @@ binaries := $(addprefix $(test_dir)/$(target)., $(binary_extensions))
 include $(make_dir)/Flags.mk
 
 # Linker script to linker flags
-LDFLAGS += -T$(ldscript)
+LDFLAGS += -T$(project_dir)/$(ldscript)
 
 # Targets
 .PHONY: all clean

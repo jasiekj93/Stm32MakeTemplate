@@ -6,13 +6,20 @@
 # This file is only a template and should be included 
 # in other Makefile
 
+# Release
+generate_lst_files = 0
+generate_debug_info = 0
+optimalization = -Os
+
 # Debug
-DEBUG ?= 1
-GEN_LST ?= 0
-OPT ?= -O0
+ifeq ($(build_type), debug)
+generate_lst_files = 1
+generate_debug_info = 1
+optimalization = -O0
+endif
 
 ### GCC flags ###
-CFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(OPT)
+CFLAGS = $(MCU) $(cxx_defs) $(cxx_includes) $(optimalization)
 
 ifneq ($(PLATFORM), Pc32)
 CFLAGS += -fdata-sections -ffunction-sections 
@@ -20,7 +27,7 @@ CXXFLAGS += -ffreestanding -fno-exceptions -fno-rtti
 endif
 
 # Add debug flags
-ifeq ($(DEBUG), 1)
+ifeq ($(generate_debug_info), 1)
 CFLAGS += -g -gdwarf-2
 endif
 
@@ -28,7 +35,7 @@ endif
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" 
 
 # Generate assembly output into build directory
-ifeq ($(GEN_LST), 1)
+ifeq ($(generate_lst_files), 1)
 CFLAGS += -Wa,-a,-ad,-alms=$(build_dir)/$(notdir $(<:.cpp=.lst))
 endif
 
@@ -36,7 +43,7 @@ endif
 CXXFLAGS += $(CFLAGS) -std=c++17 
 
 #Assembler flags
-ASFLAGS += $(MCU) $(asm_defs) $(asm_includes) $(OPT) -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions 
+ASFLAGS += $(MCU) $(asm_defs) $(asm_includes) $(optimalization) -Wall -fdata-sections -ffunction-sections -ffreestanding -fno-exceptions
 
 #Linker flags and directories
 #Libraries are stored in variable LDLIBS

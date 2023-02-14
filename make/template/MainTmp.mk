@@ -27,7 +27,7 @@ cxx_sources =  \
 cxx_includes =  \
 
 # Linker script
-ldscript = 
+export ldscript = 
 
 # Append rest of Makefile from template
 include $(make_dir)/Main.mk
